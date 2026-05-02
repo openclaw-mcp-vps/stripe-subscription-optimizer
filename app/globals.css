@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --background: #0d1117;
+  --background-elevated: #121a26;
+  --card: #161f2d;
+  --border: #263246;
+  --text: #e6edf3;
+  --muted: #9ba6b5;
+  --accent: #3dd9b2;
+  --accent-strong: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(1200px 700px at 20% -10%, #1b2433 0%, var(--background) 40%) no-repeat, var(--background);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-space-grotesk), "Segoe UI", sans-serif;
+  line-height: 1.45;
+}
+
+a {
+  color: inherit;
+}
+
+.grid-surface {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+.glass-card {
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.accent-ring {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent), 0 12px 36px rgba(14, 23, 40, 0.45);
+}
+
+.metric-positive {
+  color: #44e795;
+}
+
+.metric-negative {
+  color: #ff7b72;
+}
